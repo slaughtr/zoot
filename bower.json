@@ -13,5 +13,8 @@
   ],
   "dependencies": {
     "materialize": "^0.98.2"
-  }
+  },
+  "authors": [
+    "slaughtr <dslaughtr@gmail.com>"
+  ]
 }

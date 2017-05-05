@@ -1,8 +1,13 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Angular 2 To Do List for Epicodus</title>
+    <title>Zoot</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
+    <script src="https://use.fontawesome.com/825ae4b19e.js"></script>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="build/js/vendor.min.js"></script>
     <link rel="stylesheet" href="build/css/vendor.css">
     <!-- 1. Load libraries -->
@@ -14,6 +19,7 @@
     <!-- 2. Configure SystemJS -->
     <script src="systemjs.config.js"></script>
 
+    <link href="../node_modules/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet">
     <link rel="stylesheet" href="build/css/styles.css">
     <script>
       System.import('app').catch(function(err){ console.error(err); });
@@ -21,6 +27,6 @@
   </head>
   <!-- 3. Display the application -->
   <body>
-    <app-root>Loading...</app-root>
+    <app-root></app-root>
   </body>
 </html>

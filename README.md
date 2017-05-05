@@ -15,6 +15,7 @@ You will need the following things properly installed on your computer.
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with NPM)
 * [Bower](https://bower.io/)
+* [Gulp](http://gulpjs.com) `npm install gulp -g`
 
 
 ## Installation
@@ -136,14 +137,14 @@ Date admitted: "12/12/2012"
 #### styling
 + Divs everywhere, again
 + Materialize/Angular Material for pretty much everything.
-⋅⋅* Cards for animals
-⋅⋅* 3 col layout
-⋅⋅* Navbar: [[New Animal]     ZOOT     [Filter(dropdown)] (github)]
+  * Cards for animals
+  * 3 col layout
+  * Navbar: [[New Animal]     ZOOT     [Filter(dropdown)] (github)]
 + Color palette (hopefully high enough contrast)
-⋅⋅* Background: #e0f2f1 teal lighten-5
-⋅⋅* Navbar: #004d40 teal darken-4
-⋅⋅* Cards: #b2ebf2 cyan lighten-4
-⋅⋅* Secondaries: #b9f6ca green accent-1, #64ffda teal accent-2, #18ffff cyan accent-2
+  * Background: #e0f2f1 teal lighten-5
+  * Navbar: #004d40 teal darken-4
+  * Cards: #b2ebf2 cyan lighten-4
+  * Secondaries: #b9f6ca green accent-1, #64ffda teal accent-2, #18ffff cyan accent-2
 
 
 # Known Problems
