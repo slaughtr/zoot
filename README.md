@@ -5,7 +5,7 @@
 #### By _**{Dallas Slaughter}**_
 
 
-This app is made for zoo workers to track information about animals in the zoo.
+This app is made for zoo workers to track information about animals in the zoo. It will provide the workers the ability to add new animals, update existing animals, or view animals based on several filters. It will provide the workers with extensive information about the animals, such as age, diet, number of caretakers needed, etc.
 
 
 ## Prerequisites
@@ -28,7 +28,7 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* You will first need to create a Firebase app at the Firebase link above. You will use information from that app (click on 'Add Firebase to your web app') in the .env file as detailed below.
+* You will first need to create a Firebase app at [Firebase](https://firebase.google.com). You will use information from that app (click on 'Add Firebase to your web app') in the api-keys.ts (not provided, you will have to create) file as detailed below.
 * `gulp build && gulp serve`
 * Visit your app at [http://localhost:3000](http://localhost:3000).
 
@@ -48,40 +48,14 @@ export var masterFirebaseConfig = {
 {
   "rules": {
     ".read": true,
-    ".write": "auth != null",
-    "users": {
-      ".indexOn": "userID"
-    }
+    ".write": true
   }
 }
 ```
 
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details. You can use this to easily add new components and templates for further feature integration, such as all the things on the TODO list below! Don't forget to make a pull request :)
-
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-
 ## Further Reading / Useful Links
 
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-* [ember-paper](http://miguelcobain.github.io/ember-paper/release-1/)
 
 ## Support and Contact
 
@@ -90,68 +64,90 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ## Implemented Features
 
-~~Build starting JSON for Firebase~~
 
-~~Google Auth~~
 
-~~Question model~~
+TODO
+======
+#### User stories:
++ I want to log a newly-admitted animal by submitting a form with animal species, name, age, diet, zoo location, number of needed caretakers, sex, one like and one dislike.
++ I want to view a list of animals I have logged.
++ I want options to view all animals, only young animals (less than 2 years of age), or only mature animals (more than 2 years of age).
++ I want to click an animal to edit its name, age or caretakers.
 
-~~Answer model~~
+#### Objectives
++ Application uses a model to organize data.
++ Components create display and behavior for your templates.
++ TypeScript is used throughout application; including variable data types.
++ Users can successfully create and edit instances of a model.
++ Models can be filtered using a pipe.
++ Project is in a polished, portfolio-quality state. (Clear code presentation, error free, basic styling, complete README, thoughtful UI, etc.)
++ README contains details on functionality you'd include in the future, given the opportunity.
++ Required functionality was in place by the Friday deadline.
++ Project demonstrates understanding of week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
 
-~~Header or navbar (probably header)~~
+#### General
++ Add images for Firebase to README
 
-~~Header/Navbar should contain links to github/linked in, and obviously navigation~~
-~~Files: index, question, profile (containing all user's
-questions and answers)~~
+FURTHER EXPLORATION
+======
++ Extend the functionality of the app by building out the animal model to further enhance the app.
++ Add custom SASS styling with corresponding Gulp tasks to compile.
++ Display of the total number of caretakers needed in a day.
++ Add a property that records when each animal was admitted. The user could enter a date and time, or the app can generate a timestamp.
++ Expand the application to differentiate between animals' species. Group the animals into those categories. Then include a component to display the total needed caretakers for whichever species the user selects.
++ Add a new master component to average the total age for each species.
++ Show animals based on diet type. Then, show all animals who eat meat (carnivores AND omnivores)
 
-~~DB relation (Question one to many Answer, Answer many to one
-  Question, Question many to one User, Comment many to one User)~~
+DREAMS
+======
++ Screen reader integration
 
-  ~~Index (should contain most recent questions)~~
+Beginning Plan
+======
 
-  ~~Question (individual question page, also shows comments)~~
++ Model layout:
+```
+---------
+Species: "Arctic Fox"
+Name: "Moon"
+Age: 2
+Diet: "Carnivore"
+Location: "Northern Trail"
+Caretakers: 5
+Sex: "Female"
+Likes: "Cool shade"
+Dislikes: "Loud noises"
+Image URL: "image.com/image.jpg"
+Description: "white spot on left foot"
+Date admitted: "12/12/2012"
+---------
+```
 
-  ~~User Ember Paper because material design is sexy and quick~~
++ Make a datas.json containing a few animals, upload to firebase
 
-  ~~Font Awesome Icons or Material Icons (probably a mix)~~
++ Very basic page layout (Materialize - navbar, column layout, cards for animals)
 
-  ~~Ember Burger Menu? May be overkill?~~
++ New animal form (user-inputtable date? if empty default to current date?)
 
-  ~~CSS as seen fit~~
++ Edit animal form (copy of new-animal, just pre-fills)
 
-## TODO
-* Question/answer editing/deleting
-
-#### FURTHER EXPLORATION
-* Admin account (how to handle this for code review?)
-* Upvote/downvote (simple point system in question/answer models)
-  * TODO: add points model with many to one to users relation, implement is save-answer.js and save-question.js
-* Tags (Many to many with questions)
-#### DREAMS
-* Implement Untapped API
-
-## Beginning Plan
-#### templates
-
- * User (shows all user's questions and answers, common tags?, total points via up/down voting?)
- * Tag (show all questions with a certain tag, probably re-use index?)
++ Pipes (filter by: All/Young/Old/Species/Admitted/Diet/more?)
 
 #### styling
-
-* All done and moved to implemented features!
-
-  ![divs everywhere](https://media.makeameme.org/created/divs-divs-everywhere-ntf4n9.jpg)
++ Divs everywhere, again
++ Materialize/Angular Material for pretty much everything.
+⋅⋅* Cards for animals
+⋅⋅* 3 col layout
+⋅⋅* Navbar: [[New Animal]     ZOOT     [Filter(dropdown)] (github)]
++ Color palette (hopefully high enough contrast)
+⋅⋅* Background: #e0f2f1 teal lighten-5
+⋅⋅* Navbar: #004d40 teal darken-4
+⋅⋅* Cards: #b2ebf2 cyan lighten-4
+⋅⋅* Secondaries: #b9f6ca green accent-1, #64ffda teal accent-2, #18ffff cyan accent-2
 
 
 # Known Problems
- * Between EmberFire, Torii, npm, and Ember dependencies, there can be some crazy strange weird stupid version problems. As of the time of writing, the following works:
- ```
- "ember-cli": "2.10.0",
- "ember-data": "^2.10.0",
- "emberfire": "2.0.7",
- "torii": "0.6.1"
- ```
-Any attempt to change this could result in certain death. Or just really strange, hard to diagnose errors. Check the contact section if you're having problems. I'll happily help any way I can.
+
 
 
 ## License
