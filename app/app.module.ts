@@ -7,6 +7,7 @@ import { AngularFireModule } from 'angularfire2';
 import { masterFirebaseConfig } from './api-keys';
 
 import { AppComponent } from './app.component';
+import { AnimalListComponent } from './animal-list.component';
 
 
 export const firebaseConfig = {
@@ -25,7 +26,7 @@ export const firebaseConfig = {
              AngularFireModule.initializeApp(firebaseConfig)
            ],
   declarations: [ AppComponent,
-                  
+                  AnimalListComponent,                  
                 ],
   bootstrap: [ AppComponent ]
 })

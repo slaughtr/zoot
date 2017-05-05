@@ -30,6 +30,12 @@ declare var jQuery: any;
         </ul>
       </div>
     </nav>
+
+    <div class="row">
+      <div class="col s12">
+        <animal-list [animals]="animals | async"></animal-list>
+      </div>
+    </div>
   `
 })
 
