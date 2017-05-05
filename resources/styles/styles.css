@@ -1,3 +1,18 @@
 html {
   background-color: #e0f2f1;
 }
+
+.card {
+  min-height: 615px;
+}
+
+.card img {
+  display: block;
+  max-height: 200px;
+  height: auto;
+  width: auto;
+}
+
+ul li {
+
+}
