@@ -17,7 +17,7 @@ declare var jQuery: any;
       <li><a href="#!">By Date Admitted</a></li>
       <li><a href="#!">By Diet (sub-dropdown of omni/veg/carn, also omni&carn)</a></li>
     </ul>
-    <nav>
+    <nav class="teal darken-4">
       <div class="nav-wrapper">
         <ul class="left">
           <li><a href="#">Add New Animal</a></li>
