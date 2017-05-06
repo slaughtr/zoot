@@ -31,8 +31,12 @@ declare var jQuery: any
         </ul>
       </div>
     </nav>
-
-    <animal-new *ngIf="showNewAnimalForm" (newAnimalSender)="addNewAnimal($event)"></animal-new>
+    <div class="row">
+      <div class="col s12">
+        <animal-new *ngIf="showNewAnimalForm" (newAnimalSender)="addNewAnimal($event)"></animal-new>
+      </div>
+    </div>
+    
     <div class="row">
       <div class="col s12">
         <animal-list *ngIf="!showNewAnimalForm" [animals]="animals | async"></animal-list>

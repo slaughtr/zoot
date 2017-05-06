@@ -4,8 +4,8 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'animal-list',
   template: `
-    <div class="col s3 m3 l3" *ngFor="let animal of animals">
-      <div class="card">
+    <div class="col s4 m4 l4" *ngFor="let animal of animals">
+      <div class="card animalListCard">
         <div class="card-image cyan lighten-4">
           <img [src]="animal.imageURL">
           <span class="card-title">{{animal.name}}</span>
@@ -26,8 +26,6 @@ import { Animal } from './animal.model';
           </ul>
         </div>
       </div>
-    </div>
-    <div class="col s1 m1 l1">
     </div>
   `
 })

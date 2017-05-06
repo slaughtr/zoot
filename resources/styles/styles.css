@@ -2,7 +2,7 @@ html {
   background-color: #e0f2f1;
 }
 
-.card {
+.animalListCard {
   min-height: 888px;
   display: flex;
   flex-direction: column;
@@ -23,3 +23,21 @@ html {
   flex-grow: 1;
   font-size: 18px;
 }
+
+form {
+  font-size: 18px;
+}
+
+label {
+  font-size: 20pt !important;
+  display: inline;
+}
+
+select {
+  margin: 10px !important;
+}
+
+.input-field {
+     color: black;
+     font-size: 20pt !important;
+   }
