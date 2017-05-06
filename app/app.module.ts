@@ -9,6 +9,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AppComponent } from './app.component';
 import { AnimalListComponent } from './animal-list.component';
 import { AnimalNewComponent } from './animal-new.component';
+import { AnimalEditComponent } from './animal-edit.component';
 
 
 export const firebaseConfig = {
@@ -28,7 +29,8 @@ export const firebaseConfig = {
            ],
   declarations: [ AppComponent,
                   AnimalListComponent,
-                  AnimalNewComponent,                  
+                  AnimalNewComponent,
+                  AnimalEditComponent
                 ],
   bootstrap: [ AppComponent ]
 })

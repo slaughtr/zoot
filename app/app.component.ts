@@ -39,7 +39,7 @@ declare var jQuery: any
 
     <div class="row">
       <div class="col s12">
-        <animal-list *ngIf="!showNewAnimalForm" [animals]="animals | async"></animal-list>
+        <animal-list *ngIf="showAnimalList" [animals]="animals | async" (editAnimalSender)="editAnimal($event)"></animal-list>
       </div>
     </div>
   `
@@ -52,13 +52,22 @@ export class AppComponent {
    }
 
    showNewAnimalForm: boolean = false
+   showAnimalList: boolean = true
+
    toggleNewAnimalForm() {
      this.showNewAnimalForm = !(this.showNewAnimalForm)
+     this.showAnimalList = !(this.showAnimalList)
    }
 
    addNewAnimal(newAnimal: Animal) {
      this.animals.push(newAnimal)
    }
+
+   editAnimal(animalToEdit: any) {
+   delete animalToEdit.animal.$exists;
+   delete animalToEdit.animal.$key;
+   this.animals.update(animalToEdit.key, animalToEdit.animal)
+ }
 
    //serves as a jQuery document.ready
    ngAfterViewInit() {

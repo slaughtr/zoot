@@ -4,12 +4,13 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'animal-list',
   template: `
+  <div *ngIf="showAnimalList">
     <div class="col s4 m4 l4" *ngFor="let animal of animals">
       <div class="card animalListCard">
         <div class="card-image cyan lighten-4">
           <img [src]="animal.imageURL">
           <span class="card-title">{{animal.name}}</span>
-          <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal"><i class="material-icons">edit</i></a>
+          <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal"><i (click)="toggleEditAnimalForm(animal)"  class="material-icons">edit</i></a>
         </div>
         <div class="card-content cyan lighten-4">
           <ul class="collection">
@@ -27,9 +28,31 @@ import { Animal } from './animal.model';
         </div>
       </div>
     </div>
+    </div>
+    <animal-edit *ngIf="animalToEdit" [animal]="animalToEdit" (editAnimalSender)="editAnimal($event)" (hideAnimalListForEdit)="hideAnimalListForEdit()"></animal-edit>
   `
 })
 
 export class AnimalListComponent {
-  @Input() animals: Animal[];
+  @Input() animals: Animal
+  @Output() editAnimalSender = new EventEmitter()
+
+  showAnimalList: boolean = true
+  animalToEdit: Animal
+
+  hideAnimalListForEdit() {
+    console.log("hideANimalListForEdit")
+    this.showAnimalList = !(this.showAnimalList)
+  }
+
+  toggleEditAnimalForm(animal: Animal) {
+    console.log("toggleEditAnimalForm")
+    this.animalToEdit = animal
+    this.showAnimalList = false
+  }
+
+  editAnimal(animalToEdit: any) {
+    this.animalToEdit = null
+    this.editAnimalSender.emit(animalToEdit)
+  }
 }
