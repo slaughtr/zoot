@@ -11,7 +11,7 @@
     "dislikes" : "Loud noises",
     "imageURL" : "https://upload.wikimedia.org/wikipedia/commons/9/94/Fjellrev_pho.jpg",
     "description" : "white spot on left foot",
-    "admitted" : "12/12/2012"
+    "admitted" : "2012-12-12"
   }, {
     "species": "Boa Constrictor",
     "name" : "Snek",
@@ -24,7 +24,7 @@
     "dislikes" : "Invaded personal space",
     "imageURL" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Boaconstrictor_shed_front.jpg/800px-Boaconstrictor_shed_front.jpg",
     "description" : "louis vutton pattern on belly",
-    "admitted" : "01/01/2016"
+    "admitted" : "2016-01-01"
   }, {
     "species": "Brown bear",
     "name" : "Yogi",
@@ -37,7 +37,7 @@
     "dislikes" : "campers",
     "imageURL" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ursus_arctos_lasiotus_-_Beijing_Zoo_3.JPG/1024px-Ursus_arctos_lasiotus_-_Beijing_Zoo_3.JPG",
     "description" : "wears a funny hat and tie",
-    "admitted" : "03/01/2017"
+    "admitted" : "2017-03-01"
   }, {
     "species": "Elephant",
     "name" : "Melvin",
@@ -50,7 +50,7 @@
     "dislikes" : "Mice and big guns",
     "imageURL" : "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Asian_Elephant%2C_Royal_Chitwan_National_Park.jpg/220px-Asian_Elephant%2C_Royal_Chitwan_National_Park.jpg",
     "description" : "one tusk approx. twice as long as the other",
-    "admitted" : "12/11/2012"
+    "admitted" : "2012-12-11"
   }, {
     "species": "Bald Eagle",
     "name" : "HAWKWAAAA",
@@ -63,7 +63,7 @@
     "dislikes" : "Everything else",
     "imageURL" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Adler_jagt.jpg/220px-Adler_jagt.jpg",
     "description" : "Despite her species, she has beautiful golden locks on her head",
-    "admitted" : "02/10/2013"
+    "admitted" : "2013-02-10"
   }, {
     "species": "Spectacled Flying Fox",
     "name" : "Robyn",
@@ -76,6 +76,19 @@
     "dislikes" : "Corny jokes and rufous owls",
     "imageURL" : "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/CSIRO_ScienceImage_3220_Spectacled_flying_fox.jpg/170px-CSIRO_ScienceImage_3220_Spectacled_flying_fox.jpg",
     "description" : "white spot on left foot",
-    "admitted" : "12/12/2012"
-  }]
+    "admitted" : "2007-11-31"
+  }, {
+    "admitted": "2017-05-06",
+    "age": 1,
+    "caretakers": 2,
+    "description": "Missing part of fin",
+    "diet": "Omnivore",
+    "dislikes": "Being treated like a kid",
+    "imageURL": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Nemo_clown_fish_1.gif/220px-Nemo_clown_fish_1.gif",
+    "likes": "Adventures with his friends",
+    "location": "Under Da See",
+    "name": "Nemo",
+    "sex": "Male",
+    "species": "Clown Fish"
+    }]
 }
