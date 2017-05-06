@@ -41,3 +41,11 @@ select {
      color: black;
      font-size: 20pt !important;
    }
+
+   .dropdown-content.nested {
+      overflow-y: visible;
+   }
+
+   .dropdown-content .dropdown-content {
+      margin-left: 100%;
+   }

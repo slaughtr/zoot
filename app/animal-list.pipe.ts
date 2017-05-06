@@ -38,11 +38,11 @@ export class AnimalListPipe implements PipeTransform {
       }))
     } else if (filter === 'meateaters') {
       return input.map(animals => animals.filter(animal => {
-        return ((animal.diet === 'Omnivore') && (animal.diet === 'Carnivore'))
+        return ((animal.diet === 'Omnivore') || (animal.diet === 'Carnivore'))
       }))
     } else if (filter === 'planteaters') {
       return input.map(animals => animals.filter(animal => {
-        return ((animal.diet === 'Omnivore') && (animal.diet === 'Herbivore'))
+        return ((animal.diet === 'Omnivore') || (animal.diet === 'Herbivore'))
       }))
     } else if (filter === 'male') {
       return input.map(animals => animals.filter(animal => {
