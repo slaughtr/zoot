@@ -1,8 +1,8 @@
-import { Component, AfterViewInit } from '@angular/core';
-import { AngularFire, FirebaseListObservable } from 'angularfire2';
-import { Animal } from './animal.model';
+import { Component, AfterViewInit } from '@angular/core'
+import { AngularFire, FirebaseListObservable } from 'angularfire2'
+import { Animal } from './animal.model'
 
-declare var jQuery: any;
+declare var jQuery: any
 
 @Component({
   selector: 'app-root',
@@ -20,7 +20,8 @@ declare var jQuery: any;
     <nav class="cyan darken-4">
       <div class="nav-wrapper">
         <ul class="left">
-          <li><a href="#">Add New Animal</a></li>
+        <li *ngIf="!showNewAnimalForm" class="right"><a (click)="toggleNewAnimalForm()">Add a New Animal</a></li>
+     <li *ngIf="showNewAnimalForm" class="right"><a (click)="toggleNewAnimalForm()">Done Adding</a></li>
         </ul>
         <a href="#!" class="brand-logo center">ZOOT</a>
         <ul class="right hide-on-med-and-down">
@@ -31,24 +32,34 @@ declare var jQuery: any;
       </div>
     </nav>
 
+    <animal-new *ngIf="showNewAnimalForm" (newAnimalSender)="addNewAnimal($event)"></animal-new>
     <div class="row">
       <div class="col s12">
-        <animal-list [animals]="animals | async"></animal-list>
+        <animal-list *ngIf="!showNewAnimalForm" [animals]="animals | async"></animal-list>
       </div>
     </div>
   `
 })
 
 export class AppComponent {
-  animals: FirebaseListObservable<any[]>;
+  animals: FirebaseListObservable<any[]>
    constructor(af: AngularFire) {
-     this.animals = af.database.list('/animals');
+     this.animals = af.database.list('/animals')
+   }
+
+   showNewAnimalForm: boolean = false
+   toggleNewAnimalForm() {
+     this.showNewAnimalForm = !(this.showNewAnimalForm)
+   }
+
+   addNewAnimal(newAnimal: Animal) {
+     this.animals.push(newAnimal)
    }
 
    //serves as a jQuery document.ready
    ngAfterViewInit() {
      jQuery(".dropdown-button").dropdown({
        belowOrigin: true,
-     });
+     })
    }
 }

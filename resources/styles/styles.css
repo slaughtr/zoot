@@ -3,16 +3,23 @@ html {
 }
 
 .card {
-  min-height: 615px;
+  min-height: 888px;
+  display: flex;
+  flex-direction: column;
 }
 
-.card img {
-  display: block;
-  max-height: 200px;
-  height: auto;
-  width: auto;
+.card-title {
+  font-size: 45px;
 }
 
-ul li {
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 
+}
+
+.collection-item {
+  flex-grow: 1;
+  font-size: 18px;
 }

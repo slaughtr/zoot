@@ -9,7 +9,7 @@ import { Animal } from './animal.model';
         <div class="card-image cyan lighten-4">
           <img [src]="animal.imageURL">
           <span class="card-title">{{animal.name}}</span>
-          <a class="btn-floating halfway-fab waves-effect waves-light teal"><i class="material-icons">edit</i></a>
+          <a class="btn-floating btn-large halfway-fab waves-effect waves-light teal"><i class="material-icons">edit</i></a>
         </div>
         <div class="card-content cyan lighten-4">
           <ul class="collection">
