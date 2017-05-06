@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AnimalListComponent } from './animal-list.component';
 import { AnimalNewComponent } from './animal-new.component';
 import { AnimalEditComponent } from './animal-edit.component';
+import { AnimalListPipe } from './animal-list.pipe'
 
 
 export const firebaseConfig = {
@@ -30,7 +31,8 @@ export const firebaseConfig = {
   declarations: [ AppComponent,
                   AnimalListComponent,
                   AnimalNewComponent,
-                  AnimalEditComponent
+                  AnimalEditComponent,
+                  AnimalListPipe
                 ],
   bootstrap: [ AppComponent ]
 })

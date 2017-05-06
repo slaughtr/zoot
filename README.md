@@ -130,7 +130,7 @@ Date admitted: "12/12/2012"
 
 + ~~New animal form (user-inputtable date?~~ if empty default to current date?)
 
-+ Edit animal form (copy of new-animal, just pre-fills)
++ ~~Edit animal form (copy of new-animal, just pre-fills)~~
 
 + Pipes (filter by: All/Young/Old/Species/Admitted/Diet/more?)
 
@@ -142,7 +142,7 @@ Date admitted: "12/12/2012"
   * ~~Navbar: [[New Animal]     ZOOT     [Filter(dropdown)] (github)]~~
 + Color palette (hopefully high enough contrast)
   * ~~Background: #e0f2f1 teal lighten-5~~
-  * Navbar: #004d40 teal darken-4
+  * ~~Navbar: #004d40 teal darken-4~~
   * ~~Cards: #b2ebf2 cyan lighten-4~~
   * Secondaries: #b9f6ca green accent-1, #64ffda teal accent-2, #18ffff cyan accent-2
 

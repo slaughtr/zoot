@@ -5,7 +5,7 @@ import { Animal } from './animal.model';
   selector: 'animal-list',
   template: `
   <div *ngIf="showAnimalList">
-    <div class="col s4 m4 l4" *ngFor="let animal of animals">
+    <div class="col s12 m6 l3" *ngFor="let animal of animals">
       <div class="card animalListCard">
         <div class="card-image cyan lighten-4">
           <img [src]="animal.imageURL">

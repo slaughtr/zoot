@@ -3,7 +3,7 @@ html {
 }
 
 .animalListCard {
-  min-height: 888px;
+  height: 900px;
   display: flex;
   flex-direction: column;
 }

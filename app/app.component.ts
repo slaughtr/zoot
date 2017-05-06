@@ -8,14 +8,14 @@ declare var jQuery: any
   selector: 'app-root',
   template: `
     <ul id="dropdown1" class="dropdown-content">
-      <li><a href="#!">All</a></li>
+      <li (click)="appliedFilter = 'all';"><a>All</a></li>
       <li class="divider"></li>
-      <li><a href="#!">Young</a></li>
-      <li><a href="#!">Old</a></li>
+      <li (click)="appliedFilter = 'young';"><a>Young</a></li>
+      <li (click)="appliedFilter = 'old';"><a>Old</a></li>
       <li class="divider"></li>
-      <li><a href="#!">By Species (make sub-dropdown listing each species)</a></li>
-      <li><a href="#!">By Date Admitted</a></li>
-      <li><a href="#!">By Diet (sub-dropdown of omni/veg/carn, also omni & carn)</a></li>
+      <li (click)="appliedFilter = '';"><a>By Species (make sub-dropdown listing each species)</a></li>
+      <li (click)="appliedFilter = '';"><a>By Date Admitted</a></li>
+      <li (click)="appliedFilter = '';"><a>By Diet (sub-dropdown of omni/veg/carn, also omni & carn)</a></li>
     </ul>
     <nav class="cyan darken-4">
       <div class="nav-wrapper">
@@ -39,7 +39,7 @@ declare var jQuery: any
 
     <div class="row">
       <div class="col s12">
-        <animal-list *ngIf="showAnimalList" [animals]="animals | async" (editAnimalSender)="editAnimal($event)"></animal-list>
+        <animal-list *ngIf="showAnimalList" [animals]="animals | listfilter:appliedFilter | async" (editAnimalSender)="editAnimal($event)"></animal-list>
       </div>
     </div>
   `
@@ -51,6 +51,7 @@ export class AppComponent {
      this.animals = af.database.list('/animals')
    }
 
+   appliedFilter: string = 'all'
    showNewAnimalForm: boolean = false
    showAnimalList: boolean = true
 
