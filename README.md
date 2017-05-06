@@ -70,13 +70,13 @@ export var masterFirebaseConfig = {
 TODO
 ======
 #### User stories:
-+ I want to log a newly-admitted animal by submitting a form with animal species, name, age, diet, zoo location, number of needed caretakers, sex, one like and one dislike.
-+ I want to view a list of animals I have logged.
++ ~~I want to log a newly-admitted animal by submitting a form with animal species, name, age, diet, zoo location, number of needed caretakers, sex, one like and one dislike.~~
++ ~~I want to view a list of animals I have logged.~~
 + I want options to view all animals, only young animals (less than 2 years of age), or only mature animals (more than 2 years of age).
 + I want to click an animal to edit its name, age or caretakers.
 
 #### Objectives
-+ Application uses a model to organize data.
++ ~~Application uses a model to organize data.~~
 + Components create display and behavior for your templates.
 + TypeScript is used throughout application; including variable data types.
 + Users can successfully create and edit instances of a model.
@@ -91,10 +91,10 @@ TODO
 
 FURTHER EXPLORATION
 ======
-+ Extend the functionality of the app by building out the animal model to further enhance the app.
++ ~~Extend the functionality of the app by building out the animal model to further enhance the app.~~
 + Add custom SASS styling with corresponding Gulp tasks to compile.
 + Display of the total number of caretakers needed in a day.
-+ Add a property that records when each animal was admitted. The user could enter a date and time, or the app can generate a timestamp.
++ ~~Add a property that records when each animal was admitted. The user could enter a date and time, or the app can generate a timestamp.~~
 + Expand the application to differentiate between animals' species. Group the animals into those categories. Then include a component to display the total needed caretakers for whichever species the user selects.
 + Add a new master component to average the total age for each species.
 + Show animals based on diet type. Then, show all animals who eat meat (carnivores AND omnivores)
@@ -106,7 +106,7 @@ DREAMS
 Beginning Plan
 ======
 
-+ Model layout:
++ ~~Model layout:~~
 ```
 ---------
 Species: "Arctic Fox"
@@ -124,11 +124,11 @@ Date admitted: "12/12/2012"
 ---------
 ```
 
-+ Make a datas.json containing a few animals, upload to firebase
++ ~~Make a datas.json containing a few animals, upload to firebase~~
 
-+ Very basic page layout (Materialize - navbar, column layout, cards for animals)
++ ~~Very basic page layout (Materialize - navbar, column layout, cards for animals)~~
 
-+ New animal form (user-inputtable date? if empty default to current date?)
++ ~~New animal form (user-inputtable date?~~ if empty default to current date?)
 
 + Edit animal form (copy of new-animal, just pre-fills)
 
@@ -137,13 +137,13 @@ Date admitted: "12/12/2012"
 #### styling
 + Divs everywhere, again
 + Materialize/Angular Material for pretty much everything.
-  * Cards for animals
-  * 3 col layout
-  * Navbar: [[New Animal]     ZOOT     [Filter(dropdown)] (github)]
+  * ~~Cards for animals~~
+  * ~~3 col layout~~
+  * ~~Navbar: [[New Animal]     ZOOT     [Filter(dropdown)] (github)]~~
 + Color palette (hopefully high enough contrast)
-  * Background: #e0f2f1 teal lighten-5
+  * ~~Background: #e0f2f1 teal lighten-5~~
   * Navbar: #004d40 teal darken-4
-  * Cards: #b2ebf2 cyan lighten-4
+  * ~~Cards: #b2ebf2 cyan lighten-4~~
   * Secondaries: #b9f6ca green accent-1, #64ffda teal accent-2, #18ffff cyan accent-2
 
 

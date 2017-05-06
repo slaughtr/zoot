@@ -15,13 +15,13 @@ declare var jQuery: any
       <li class="divider"></li>
       <li><a href="#!">By Species (make sub-dropdown listing each species)</a></li>
       <li><a href="#!">By Date Admitted</a></li>
-      <li><a href="#!">By Diet (sub-dropdown of omni/veg/carn, also omni&carn)</a></li>
+      <li><a href="#!">By Diet (sub-dropdown of omni/veg/carn, also omni & carn)</a></li>
     </ul>
     <nav class="cyan darken-4">
       <div class="nav-wrapper">
         <ul class="left">
-        <li *ngIf="!showNewAnimalForm" class="right"><a (click)="toggleNewAnimalForm()">Add a New Animal</a></li>
-     <li *ngIf="showNewAnimalForm" class="right"><a (click)="toggleNewAnimalForm()">Done Adding</a></li>
+          <li *ngIf="!showNewAnimalForm" class="right newButton"><a (click)="toggleNewAnimalForm()">Add a New Animal</a></li>
+          <li *ngIf="showNewAnimalForm" class="right newButton"><a (click)="toggleNewAnimalForm()">Done Adding</a></li>
         </ul>
         <a href="#!" class="brand-logo center">ZOOT</a>
         <ul class="right hide-on-med-and-down">
@@ -36,7 +36,7 @@ declare var jQuery: any
         <animal-new *ngIf="showNewAnimalForm" (newAnimalSender)="addNewAnimal($event)"></animal-new>
       </div>
     </div>
-    
+
     <div class="row">
       <div class="col s12">
         <animal-list *ngIf="!showNewAnimalForm" [animals]="animals | async"></animal-list>
