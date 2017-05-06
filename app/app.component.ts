@@ -10,11 +10,11 @@ declare var jQuery: any
     <ul id="dropdown1" class="dropdown-content">
       <li (click)="appliedFilter = 'all';"><a>All</a></li>
       <li class="divider"></li>
-      <li (click)="appliedFilter = 'young';"><a>Young</a></li>
-      <li (click)="appliedFilter = 'old';"><a>Old</a></li>
+      <li (click)="appliedFilter = 'young';"><a>Young (< 3 years)</a></li>
+      <li (click)="appliedFilter = 'old';"><a>Old (> 3 years)</a></li>
       <li class="divider"></li>
       <li (click)="appliedFilter = '';"><a>By Species (make sub-dropdown listing each species)</a></li>
-      <li (click)="appliedFilter = '';"><a>By Date Admitted</a></li>
+      <li (click)="appliedFilter = 'newlyadmitted';"><a>Admitted in Last 3 Months</a></li>
       <li (click)="appliedFilter = '';"><a>By Diet (sub-dropdown of omni/veg/carn, also omni & carn)</a></li>
     </ul>
     <nav class="cyan darken-4">
@@ -26,7 +26,7 @@ declare var jQuery: any
         <a href="#!" class="brand-logo center">ZOOT</a>
         <ul class="right hide-on-med-and-down">
           <!-- Dropdown Trigger -->
-          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Filters<i class="material-icons right">arrow_drop_down</i></a></li>
+          <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Filter: {{appliedFilter}}<i class="material-icons right">arrow_drop_down</i></a></li>
           <li><a href="https://github.com/slaughtr/zoot">Github<i class="fa fa-github-alt right"></i></a></li>
         </ul>
       </div>
