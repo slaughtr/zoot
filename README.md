@@ -55,9 +55,6 @@ export var masterFirebaseConfig = {
 ```
 
 
-## Further Reading / Useful Links
-
-
 ## Support and Contact
 
 * If you have any issues installing or running this app, feel free to let me know on GitHub or email me: dslaughtr@gmail.com
@@ -69,20 +66,20 @@ export var masterFirebaseConfig = {
 
 TODO
 ======
-#### User stories:
+#### ~~User stories:~~
 + ~~I want to log a newly-admitted animal by submitting a form with animal species, name, age, diet, zoo location, number of needed caretakers, sex, one like and one dislike.~~
 + ~~I want to view a list of animals I have logged.~~
-+ I want options to view all animals, only young animals (less than 2 years of age), or only mature animals (more than 2 years of age).
-+ I want to click an animal to edit its name, age or caretakers.
++ ~~I want options to view all animals, only young animals (less than 2 years of age), or only mature animals (more than 2 years of age).~~
++ ~~I want to click an animal to edit its name, age or caretakers.~~
 
 #### Objectives
 + ~~Application uses a model to organize data.~~
-+ Components create display and behavior for your templates.
-+ TypeScript is used throughout application; including variable data types.
-+ Users can successfully create and edit instances of a model.
-+ Models can be filtered using a pipe.
-+ Project is in a polished, portfolio-quality state. (Clear code presentation, error free, basic styling, complete README, thoughtful UI, etc.)
-+ README contains details on functionality you'd include in the future, given the opportunity.
++ ~~Components create display and behavior for your templates.~~
++ ~~TypeScript is used throughout application; including variable data types.~~
++ ~~Users can successfully create and edit instances of a model.~~
++ ~~Models can be filtered using a pipe.~~
++ ~~Project is in a polished, portfolio-quality state. (Clear code presentation, error free, basic styling, complete README, thoughtful UI, etc.)~~
++ ~~README contains details on functionality you'd include in the future, given the opportunity.~~
 + Required functionality was in place by the Friday deadline.
 + Project demonstrates understanding of week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
 
@@ -95,9 +92,9 @@ FURTHER EXPLORATION
 + Add custom SASS styling with corresponding Gulp tasks to compile.
 + Display of the total number of caretakers needed in a day.
 + ~~Add a property that records when each animal was admitted. The user could enter a date and time, or the app can generate a timestamp.~~
-+ Expand the application to differentiate between animals' species. Group the animals into those categories. Then include a component to display the total needed caretakers for whichever species the user selects.
++ ~~Expand the application to differentiate between animals' species. Group the animals into those categories.~~ Then include a component to display the total needed caretakers for whichever species the user selects.
 + Add a new master component to average the total age for each species.
-+ Show animals based on diet type. Then, show all animals who eat meat (carnivores AND omnivores)
++ ~~Show animals based on diet type. Then, show all animals who eat meat (carnivores AND omnivores)~~
 
 DREAMS
 ======
@@ -132,23 +129,24 @@ Date admitted: "12/12/2012"
 
 + ~~Edit animal form (copy of new-animal, just pre-fills)~~
 
-+ Pipes (filter by: All/Young/Old/Species/Admitted/Diet/more?)
++ ~~Pipes (filter by: All/Young/Old/Species/Admitted/Diet/more?)~~
 
 #### styling
-+ Divs everywhere, again
-+ Materialize/Angular Material for pretty much everything.
++ ~~Divs everywhere, again~~
++ ~~Materialize/Angular Material for pretty much everything.~~
   * ~~Cards for animals~~
   * ~~3 col layout~~
   * ~~Navbar: [[New Animal]     ZOOT     [Filter(dropdown)] (github)]~~
-+ Color palette (hopefully high enough contrast)
++ ~~Color palette (hopefully high enough contrast)~~
   * ~~Background: #e0f2f1 teal lighten-5~~
   * ~~Navbar: #004d40 teal darken-4~~
   * ~~Cards: #b2ebf2 cyan lighten-4~~
-  * Secondaries: #b9f6ca green accent-1, #64ffda teal accent-2, #18ffff cyan accent-2
+  * ~~Secondaries: #b9f6ca green accent-1, #64ffda teal accent-2, #18ffff cyan accent-2~~
 
 
 # Known Problems
 
+Adding in new animals and then attempting to filter by species can be odd. Occasionally, the new animal shows up as a completely new species, even if you copy/paste the species of another animal. 
 
 
 ## License
