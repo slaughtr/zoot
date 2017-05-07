@@ -1,15 +1,16 @@
 import { Pipe, PipeTransform } from '@angular/core'
 import { Animal } from './animal.model'
 
+declare var moment: any;
 
 @Pipe({
   name: 'listfilter',
-  pure: true
+  pure: false
 })
 
 export class AnimalListPipe implements PipeTransform {
 
-  transform(input: any, filter: string) {
+  transform(input: any, filter: string, speciesArray: any[]) {
     if (filter === 'all') {
       return input
     } else if (filter === 'young') {
@@ -64,6 +65,10 @@ export class AnimalListPipe implements PipeTransform {
       return input.map(animals => animals.filter(animal => {
         var cutOff = moment().subtract(3, 'months').format('YYYY-MM-DD')
         return moment(animal.admitted, 'YYYY-MM-DD').isAfter(cutOff)
+      }))
+    } else if (speciesArray.indexOf(filter) !== -1) {
+      return input.map(animals => animals.filter(animal => {
+        return (animal.species).toLowerCase() === filter
       }))
     }
   }
