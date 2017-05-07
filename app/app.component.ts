@@ -4,7 +4,6 @@ import { Animal } from './animal.model'
 
 declare var jQuery: any
 
-
 @Component({
   selector: 'app-root',
   template: `
@@ -47,11 +46,6 @@ declare var jQuery: any
             <li><a>                                         </a></li>
             <li><a href="https://github.com/slaughtr/zoot">Github<i class="fa fa-github-alt right"></i></a></li>
           </ul>
-            <!--below are items to be seen in sidenav if screen too small
-          <ul class="right side-nav" id="mobile-demo">
-            <li><a class="dropdown-button" data-activates="dropdown1" data-beloworigin="true">Filter: {{appliedFilter}}<i class="material-icons right">arrow_drop_down</i></a></li>
-            <li><a href="https://github.com/slaughtr/zoot">Github<i class="fa fa-github-alt right"></i></a></li>
-          </ul>-->
         </div>
       </nav>
     </div>
@@ -71,49 +65,45 @@ declare var jQuery: any
 
 export class AppComponent {
   animals: FirebaseListObservable<any[]>
-   constructor(af: AngularFire) {
-     this.animals = af.database.list('/animals')
-   }
+  constructor(af: AngularFire) {
+    this.animals = af.database.list('/animals')
+  }
 
+  appliedFilter: string = 'all'
+  showNewAnimalForm: boolean = false
+  showAnimalList: boolean = true
 
-   appliedFilter: string = 'all'
-   showNewAnimalForm: boolean = false
-   showAnimalList: boolean = true
+  toggleNewAnimalForm() {
+    this.showNewAnimalForm = !(this.showNewAnimalForm)
+    this.showAnimalList = !(this.showAnimalList)
+  }
 
+  addNewAnimal(newAnimal: Animal) {
+    this.animals.push(newAnimal)
+  }
 
-   toggleNewAnimalForm() {
-     this.showNewAnimalForm = !(this.showNewAnimalForm)
-     this.showAnimalList = !(this.showAnimalList)
-   }
+  editAnimal(animalToEdit: any) {
+    delete animalToEdit.animal.$exists
+    delete animalToEdit.animal.$key
+    this.animals.update(animalToEdit.key, animalToEdit.animal)
+  }
 
-   addNewAnimal(newAnimal: Animal) {
-     this.animals.push(newAnimal)
-   }
+  speciesArray: any[] = []
 
-   editAnimal(animalToEdit: any) {
-   delete animalToEdit.animal.$exists
-   delete animalToEdit.animal.$key
-   this.animals.update(animalToEdit.key, animalToEdit.animal)
- }
+  filterSpecies() {
+    var that = this
+    this.animals.forEach(function(animalArray) {
+      animalArray.forEach(function(animal) {
+        that.speciesArray.push(animal.species)
+      })
+    })
+  }
 
- speciesArray: any[] = []
+  //serves as a jQuery document.ready
+  ngAfterViewInit() {
+    jQuery(".dropdown-button").dropdown()
+    jQuery(".button-collapse").sideNav()
 
- filterSpecies() {
-   var that = this
-   this.animals.forEach(function(animalArray) {
-     animalArray.forEach(function(animal) {
-       that.speciesArray.push((animal.species).toLowerCase())
-     })
-   })
- }
-
-   //serves as a jQuery document.ready
-   ngAfterViewInit() {
-     jQuery(".dropdown-button").dropdown()
-     jQuery(".button-collapse").sideNav()
-
-
-     this.filterSpecies()
-
-   }
+    this.filterSpecies()
+  }
 }

@@ -5,7 +5,7 @@ declare var moment: any;
 
 @Pipe({
   name: 'listfilter',
-  pure: false
+  pure: true
 })
 
 export class AnimalListPipe implements PipeTransform {
@@ -68,7 +68,7 @@ export class AnimalListPipe implements PipeTransform {
       }))
     } else if (speciesArray.indexOf(filter) !== -1) {
       return input.map(animals => animals.filter(animal => {
-        return (animal.species).toLowerCase() === filter
+        return animal.species === filter
       }))
     }
   }
