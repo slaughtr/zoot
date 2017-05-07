@@ -80,6 +80,7 @@ export class AppComponent {
 
   addNewAnimal(newAnimal: Animal) {
     this.animals.push(newAnimal)
+    this.toggleNewAnimalForm()
   }
 
   editAnimal(animalToEdit: any) {
