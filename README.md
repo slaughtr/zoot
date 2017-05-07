@@ -62,10 +62,6 @@ export var masterFirebaseConfig = {
 
 ## Implemented Features
 
-
-
-TODO
-======
 #### ~~User stories:~~
 + ~~I want to log a newly-admitted animal by submitting a form with animal species, name, age, diet, zoo location, number of needed caretakers, sex, one like and one dislike.~~
 + ~~I want to view a list of animals I have logged.~~
@@ -80,6 +76,24 @@ TODO
 + ~~Models can be filtered using a pipe.~~
 + ~~Project is in a polished, portfolio-quality state. (Clear code presentation, error free, basic styling, complete README, thoughtful UI, etc.)~~
 + ~~README contains details on functionality you'd include in the future, given the opportunity.~~
+
+FURTHER EXPLORATION
+======
++ ~~Extend the functionality of the app by building out the animal model to further enhance the app.~~
++ ~~Add a property that records when each animal was admitted. The user could enter a date and time, or the app can generate a timestamp.~~
++ ~~Expand the application to differentiate between animals' species. Group the animals into those categories.~~ Then include a component to display the total needed caretakers for whichever species the user selects.
++ ~~Show animals based on diet type. Then, show all animals who eat meat (carnivores AND omnivores)~~
+
+DREAMS
+======
++ ~~Screen reader integration~~
+  + After thorough testing, I can say my site is pretty good at this from my uneducated
+
+
+TODO
+======
+
+#### Objectives
 + Required functionality was in place by the Friday deadline.
 + Project demonstrates understanding of week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
 
@@ -88,17 +102,10 @@ TODO
 
 FURTHER EXPLORATION
 ======
-+ ~~Extend the functionality of the app by building out the animal model to further enhance the app.~~
 + Add custom SASS styling with corresponding Gulp tasks to compile.
 + Display of the total number of caretakers needed in a day.
-+ ~~Add a property that records when each animal was admitted. The user could enter a date and time, or the app can generate a timestamp.~~
-+ ~~Expand the application to differentiate between animals' species. Group the animals into those categories.~~ Then include a component to display the total needed caretakers for whichever species the user selects.
 + Add a new master component to average the total age for each species.
-+ ~~Show animals based on diet type. Then, show all animals who eat meat (carnivores AND omnivores)~~
 
-DREAMS
-======
-+ Screen reader integration
 
 Beginning Plan
 ======
@@ -146,7 +153,7 @@ Date admitted: "12/12/2012"
 
 # Known Problems
 
-Adding in new animals and then attempting to filter by species can be odd. Occasionally, the new animal shows up as a completely new species, even if you copy/paste the species of another animal. 
+Adding in new animals and then attempting to filter by species can be odd. Occasionally, the new animal shows up as a completely new species, even if you copy/paste the species of another animal.
 
 
 ## License

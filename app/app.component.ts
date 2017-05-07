@@ -36,8 +36,8 @@ declare var jQuery: any
         <div class="nav-wrapper">
         <a data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="left">
-            <li *ngIf="!showNewAnimalForm" class="right newButton"><a (click)="toggleNewAnimalForm()">Add a New Animal</a></li>
-            <li *ngIf="showNewAnimalForm" class="right newButton"><a (click)="toggleNewAnimalForm()">Done Adding</a></li>
+            <li *ngIf="!showNewAnimalForm" class="right newButton"><a class="waves-effect waves-light btn-large" (click)="toggleNewAnimalForm()">Add a New Animal</a></li>
+            <li *ngIf="showNewAnimalForm" class="right newButton"><a class="waves-effect waves-light btn-large" (click)="toggleNewAnimalForm()">Done Adding</a></li>
           </ul>
           <a href="#!" class="brand-logo center">ZOOT</a>
           <ul class="right hide-on-med-and-down">
