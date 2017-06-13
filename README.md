@@ -87,18 +87,11 @@ FURTHER EXPLORATION
 DREAMS
 ======
 + ~~Screen reader integration~~
-  + After thorough testing, I can say my site is pretty good at this from my uneducated
+  + After thorough testing, I can say my site is pretty good at this from my uneducated opinion
 
 
 TODO
 ======
-
-#### Objectives
-+ Required functionality was in place by the Friday deadline.
-+ Project demonstrates understanding of week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
-
-#### General
-+ Add images for Firebase to README
 
 FURTHER EXPLORATION
 ======
