@@ -90,5 +90,89 @@
     "name": "Nemo",
     "sex": "Hermaphroditic",
     "species": "Clown Fish"
-    }]
+    }],
+      "items" : {
+        "-Kn13g3X5RYOwMcNgnuT" : {
+          "created" : "19 1497904627788",
+          "description" : "",
+          "difficulty" : "medium",
+          "due" : "2017-01-01",
+          "estTime" : "231",
+          "inSet" : "NONE",
+          "repeat" : "NONE",
+          "reward" : "NONE",
+          "skill" : "NONE",
+          "title" : "asdf"
+        },
+        "-Kn1988O7WXImo_o3Bji" : {
+          "created" : "06/19/2017 2:00 PM",
+          "description" : "",
+          "difficulty" : "medium",
+          "due" : "2017-01-01",
+          "estTime" : "1",
+          "inSet" : "NONE",
+          "repeat" : "NONE",
+          "reward" : "NONE",
+          "skill" : "NONE",
+          "title" : "MURMENETNET"
+        },
+        "-Kn19Wrql4PzYl5yygY7" : {
+          "created" : "06/19/2017 2:02 PM",
+          "description" : "BABY DON'T EXCEPTION",
+          "difficulty" : "medium",
+          "due" : "2017-01-01",
+          "estTime" : "123",
+          "inSet" : "NONE",
+          "repeat" : "NONE",
+          "reward" : "NONE",
+          "skill" : "NONE",
+          "title" : "WHAT IS NULL"
+        }
+      },
+      "kegs" : {
+        "-KnguFvQWYjIsUXTyfTL" : {
+          "abv" : 6.5,
+          "brewery" : "Boneyard",
+          "ibu" : 50,
+          "imgURL" : "http://theaposition.com/tombedell/wp-content/uploads/sites/15/2013/07/boneyard-logo.png",
+          "name" : "RPM IPA",
+          "pintsCapacity" : 124,
+          "pintsConsumed" : 122,
+          "price" : 5,
+          "style" : "India Pale Ale"
+        },
+        "-KngufDRleFtJzek_cjv" : {
+          "abv" : 5,
+          "brewery" : "Ex Novo",
+          "ibu" : 20,
+          "imgURL" : "https://static1.squarespace.com/static/56a90b870ab377c47ef04c10/t/5731640a55640b1aef392417/1462855166668/ex-novo-board-6.jpg",
+          "name" : "The Most Interesting Lager in the World",
+          "pintsCapacity" : 41,
+          "pintsConsumed" : 41,
+          "price" : 5.5,
+          "style" : "Lager"
+        },
+        "-KngvrxPvtMePavVySyf" : {
+          "abv" : 6.9,
+          "brewery" : "Anderson Valley",
+          "ibu" : 14,
+          "imgURL" : "https://avbc.com/wp-content/uploads/2013/01/logo-small.png",
+          "name" : "Wild Turkey Bourbon Barrel Stout",
+          "pintsCapacity" : 41,
+          "pintsConsumed" : 41,
+          "price" : 6.5,
+          "style" : "Stout"
+        },
+        "-KngwW9xJDqaumFLSfOU" : {
+          "abv" : 4.5,
+          "brewery" : "Sierra Nevada",
+          "ibu" : 5,
+          "imgURL" : "http://www.benekeith.com/images/beverage/bev_brand_logo-sierra.png",
+          "name" : "Otra Vez",
+          "pintsCapacity" : 41,
+          "pintsConsumed" : 41,
+          "price" : 6.5,
+          "style" : "Gosé"
+        }
+      }
 }

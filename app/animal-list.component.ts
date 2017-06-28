@@ -41,7 +41,7 @@ export class AnimalListComponent {
   animalToEdit: Animal
 
   hideAnimalListForEdit() {
-    console.log("hideANimalListForEdit")
+    console.log("hideAnimalListForEdit")
     this.showAnimalList = !(this.showAnimalList)
   }
 
